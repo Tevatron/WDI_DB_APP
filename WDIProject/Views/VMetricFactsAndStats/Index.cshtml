@@ -1,0 +1,123 @@
+﻿@model IEnumerable<WDIProject.Models.VMetricFactsAndStat>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.UnitOfMeasure)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.OtherNotes)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.AggregationMethod)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.LimitationsAndExceptions)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.p5)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.p10)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.p25)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.p50)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.p75)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.p90)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.p95)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Average)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Min)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Max)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Size)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CollectionMethodByYear)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnitOfMeasure)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.OtherNotes)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.AggregationMethod)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.LimitationsAndExceptions)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.p5)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.p10)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.p25)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.p50)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.p75)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.p90)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.p95)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Average)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Min)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Max)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Size)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.CollectionMethodByYear)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+            @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+        </td>
+    </tr>
+}
+
+</table>

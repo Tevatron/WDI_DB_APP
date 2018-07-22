@@ -1,0 +1,146 @@
+﻿@model WDIProject.Models.VMetricFactsAndStat
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>VMetricFactsAndStat</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.UnitOfMeasure)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnitOfMeasure)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AggregationMethod)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AggregationMethod)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LimitationsAndExceptions)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LimitationsAndExceptions)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p5)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p5)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p10)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p10)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p25)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p25)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p50)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p50)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p75)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p75)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p90)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p90)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.p95)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.p95)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Average)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Average)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Min)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Min)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Max)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Max)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Size)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Size)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CollectionMethodByYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CollectionMethodByYear)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { /* id = Model.PrimaryKey */ }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

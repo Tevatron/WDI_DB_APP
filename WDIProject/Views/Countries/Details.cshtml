@@ -1,0 +1,262 @@
+﻿@model WDIProject.Models.Country
+
+@{
+    ViewBag.Title = "Country Summary";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Country</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.ShortName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ShortName)
+        </dd>
+        <!--
+        <dt>
+            @Html.DisplayNameFor(model => model.TableName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TableName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LongName)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LongName)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Alpha2Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Alpha2Code)
+        </dd>
+            -->
+        <dt>
+            @Html.DisplayNameFor(model => model.CurrencyUnit)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CurrencyUnit)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SpecialNotes)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SpecialNotes)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Region)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Region)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.IncomeGroup)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.IncomeGroup)
+        </dd>
+   
+        <dt>
+            @Html.DisplayNameFor(model => model.Wb2Code)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Wb2Code)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NationalAccountsBaseYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NationalAccountsBaseYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NationalAccountsReferenceYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NationalAccountsReferenceYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SnaPriceValuation)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SnaPriceValuation)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LendingCategory)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LendingCategory)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.OtherGroups)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.OtherGroups)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SystemOfNationalAccounts)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SystemOfNationalAccounts)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AlternativeConversionFactor)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AlternativeConversionFactor)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.PppSurveyYear)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.PppSurveyYear)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.BalanceOfPaymentsManualInUse)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.BalanceOfPaymentsManualInUse)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ExternalDebtReportingStatus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ExternalDebtReportingStatus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SystemOfTrade)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SystemOfTrade)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.GovernmentAccountingConcept)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.GovernmentAccountingConcept)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ImfDataDisseminationStandard)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ImfDataDisseminationStandard)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LatestPopulationCensus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LatestPopulationCensus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LatestHouseholdSurvey)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LatestHouseholdSurvey)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.SourceOfMostRecentIncomeAndExpenditureData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.SourceOfMostRecentIncomeAndExpenditureData)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.VitalRegistrationComplete)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.VitalRegistrationComplete)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LatestAgriculturalCensus)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LatestAgriculturalCensus)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LatestIndustrialData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LatestIndustrialData)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LatestTradeData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LatestTradeData)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.LatestWaterWithdrawalData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.LatestWaterWithdrawalData)
+        </dd>
+
+    </dl>
+</div>
+
+<div>
+
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.CountryCode }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

@@ -1,0 +1,211 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="CS564ModelStoreContainer" CdmEntityContainer="CS564Entities">
+    <EntitySetMapping Name="CollectedThroughs">
+      <EntityTypeMapping TypeName="CS564Model.CollectedThrough">
+        <MappingFragment StoreEntitySet="CollectedThrough">
+          <ScalarProperty Name="Countrycode" ColumnName="Countrycode" />
+          <ScalarProperty Name="Seriescode" ColumnName="Seriescode" />
+          <ScalarProperty Name="CollectionDescription" ColumnName="CollectionDescription" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CorrelatesToes">
+      <EntityTypeMapping TypeName="CS564Model.CorrelatesTo">
+        <MappingFragment StoreEntitySet="CorrelatesTo">
+          <ScalarProperty Name="SeriesPrimary" ColumnName="SeriesPrimary" />
+          <ScalarProperty Name="SeriesSecondary" ColumnName="SeriesSecondary" />
+          <ScalarProperty Name="CorrelationScore" ColumnName="CorrelationScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Countries">
+      <EntityTypeMapping TypeName="CS564Model.Country">
+        <MappingFragment StoreEntitySet="Country">
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="ShortName" ColumnName="ShortName" />
+          <ScalarProperty Name="TableName" ColumnName="TableName" />
+          <ScalarProperty Name="LongName" ColumnName="LongName" />
+          <ScalarProperty Name="Alpha2Code" ColumnName="Alpha2Code" />
+          <ScalarProperty Name="CurrencyUnit" ColumnName="CurrencyUnit" />
+          <ScalarProperty Name="SpecialNotes" ColumnName="SpecialNotes" />
+          <ScalarProperty Name="Region" ColumnName="Region" />
+          <ScalarProperty Name="IncomeGroup" ColumnName="IncomeGroup" />
+          <ScalarProperty Name="Wb2Code" ColumnName="Wb2Code" />
+          <ScalarProperty Name="NationalAccountsBaseYear" ColumnName="NationalAccountsBaseYear" />
+          <ScalarProperty Name="NationalAccountsReferenceYear" ColumnName="NationalAccountsReferenceYear" />
+          <ScalarProperty Name="SnaPriceValuation" ColumnName="SnaPriceValuation" />
+          <ScalarProperty Name="LendingCategory" ColumnName="LendingCategory" />
+          <ScalarProperty Name="OtherGroups" ColumnName="OtherGroups" />
+          <ScalarProperty Name="SystemOfNationalAccounts" ColumnName="SystemOfNationalAccounts" />
+          <ScalarProperty Name="AlternativeConversionFactor" ColumnName="AlternativeConversionFactor" />
+          <ScalarProperty Name="PppSurveyYear" ColumnName="PppSurveyYear" />
+          <ScalarProperty Name="BalanceOfPaymentsManualInUse" ColumnName="BalanceOfPaymentsManualInUse" />
+          <ScalarProperty Name="ExternalDebtReportingStatus" ColumnName="ExternalDebtReportingStatus" />
+          <ScalarProperty Name="SystemOfTrade" ColumnName="SystemOfTrade" />
+          <ScalarProperty Name="GovernmentAccountingConcept" ColumnName="GovernmentAccountingConcept" />
+          <ScalarProperty Name="ImfDataDisseminationStandard" ColumnName="ImfDataDisseminationStandard" />
+          <ScalarProperty Name="LatestPopulationCensus" ColumnName="LatestPopulationCensus" />
+          <ScalarProperty Name="LatestHouseholdSurvey" ColumnName="LatestHouseholdSurvey" />
+          <ScalarProperty Name="SourceOfMostRecentIncomeAndExpenditureData" ColumnName="SourceOfMostRecentIncomeAndExpenditureData" />
+          <ScalarProperty Name="VitalRegistrationComplete" ColumnName="VitalRegistrationComplete" />
+          <ScalarProperty Name="LatestAgriculturalCensus" ColumnName="LatestAgriculturalCensus" />
+          <ScalarProperty Name="LatestIndustrialData" ColumnName="LatestIndustrialData" />
+          <ScalarProperty Name="LatestTradeData" ColumnName="LatestTradeData" />
+          <ScalarProperty Name="LatestWaterWithdrawalData" ColumnName="LatestWaterWithdrawalData" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Footnotes">
+      <EntityTypeMapping TypeName="CS564Model.Footnote">
+        <MappingFragment StoreEntitySet="Footnotes">
+          <ScalarProperty Name="Countrycode" ColumnName="Countrycode" />
+          <ScalarProperty Name="Seriescode" ColumnName="Seriescode" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Indicators">
+      <EntityTypeMapping TypeName="CS564Model.Indicator">
+        <MappingFragment StoreEntitySet="Indicators">
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+          <ScalarProperty Name="IndicatorCode" ColumnName="IndicatorCode" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="CollectionMethodByYear" ColumnName="CollectionMethodByYear" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="IsSimilars">
+      <EntityTypeMapping TypeName="CS564Model.IsSimilar">
+        <MappingFragment StoreEntitySet="IsSimilar">
+          <ScalarProperty Name="CountryPrimary" ColumnName="CountryPrimary" />
+          <ScalarProperty Name="CountrySecondary" ColumnName="CountrySecondary" />
+          <ScalarProperty Name="SimilarityScore" ColumnName="SimilarityScore" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MetricAggregations">
+      <EntityTypeMapping TypeName="CS564Model.MetricAggregation">
+        <MappingFragment StoreEntitySet="MetricAggregation">
+          <ScalarProperty Name="PeerGroup" ColumnName="PeerGroup" />
+          <ScalarProperty Name="SeriesCode" ColumnName="SeriesCode" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="P5" ColumnName="P5" />
+          <ScalarProperty Name="P10" ColumnName="P10" />
+          <ScalarProperty Name="P25" ColumnName="P25" />
+          <ScalarProperty Name="P50" ColumnName="P50" />
+          <ScalarProperty Name="P75" ColumnName="P75" />
+          <ScalarProperty Name="P90" ColumnName="P90" />
+          <ScalarProperty Name="P95" ColumnName="P95" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="MetricDefinitions">
+      <EntityTypeMapping TypeName="CS564Model.MetricDefinition">
+        <MappingFragment StoreEntitySet="MetricDefinition">
+          <ScalarProperty Name="Seriescode" ColumnName="Seriescode" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Metrics">
+      <EntityTypeMapping TypeName="CS564Model.Metric">
+        <MappingFragment StoreEntitySet="Metrics">
+          <ScalarProperty Name="SeriesCode" ColumnName="SeriesCode" />
+          <ScalarProperty Name="Topic" ColumnName="Topic" />
+          <ScalarProperty Name="IndicatorName" ColumnName="IndicatorName" />
+          <ScalarProperty Name="ShortDefinition" ColumnName="ShortDefinition" />
+          <ScalarProperty Name="LongDefinition" ColumnName="LongDefinition" />
+          <ScalarProperty Name="UnitOfMeasure" ColumnName="UnitOfMeasure" />
+          <ScalarProperty Name="Periodicity" ColumnName="Periodicity" />
+          <ScalarProperty Name="BasePeriod" ColumnName="BasePeriod" />
+          <ScalarProperty Name="OtherNotes" ColumnName="OtherNotes" />
+          <ScalarProperty Name="AggregationMethod" ColumnName="AggregationMethod" />
+          <ScalarProperty Name="LimitationsAndExceptions" ColumnName="LimitationsAndExceptions" />
+          <ScalarProperty Name="NotesFromOriginalSource" ColumnName="NotesFromOriginalSource" />
+          <ScalarProperty Name="GeneralComments" ColumnName="GeneralComments" />
+          <ScalarProperty Name="Source" ColumnName="Source" />
+          <ScalarProperty Name="StatisticalConceptAndMethodology" ColumnName="StatisticalConceptAndMethodology" />
+          <ScalarProperty Name="DevelopmentRelevance" ColumnName="DevelopmentRelevance" />
+          <ScalarProperty Name="RelatedSourceLinks" ColumnName="RelatedSourceLinks" />
+          <ScalarProperty Name="OtherWebLinks" ColumnName="OtherWebLinks" />
+          <ScalarProperty Name="RelatedIndicators" ColumnName="RelatedIndicators" />
+          <ScalarProperty Name="LicenseType" ColumnName="LicenseType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="sysdiagrams">
+      <EntityTypeMapping TypeName="CS564Model.sysdiagram">
+        <MappingFragment StoreEntitySet="sysdiagrams">
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="principal_id" ColumnName="principal_id" />
+          <ScalarProperty Name="diagram_id" ColumnName="diagram_id" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="popIndicatorStats" FunctionName="CS564Model.Store.popIndicatorStats" />
+    <FunctionImportMapping FunctionImportName="sp_alterdiagram" FunctionName="CS564Model.Store.sp_alterdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_creatediagram" FunctionName="CS564Model.Store.sp_creatediagram" />
+    <FunctionImportMapping FunctionImportName="sp_dropdiagram" FunctionName="CS564Model.Store.sp_dropdiagram" />
+    <FunctionImportMapping FunctionImportName="sp_helpdiagramdefinition" FunctionName="CS564Model.Store.sp_helpdiagramdefinition">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CS564Model.sp_helpdiagramdefinition_Result">
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="definition" ColumnName="definition" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_helpdiagrams" FunctionName="CS564Model.Store.sp_helpdiagrams">
+      <ResultMapping>
+        <ComplexTypeMapping TypeName="CS564Model.sp_helpdiagrams_Result">
+          <ScalarProperty Name="Database" ColumnName="Database" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Owner" ColumnName="Owner" />
+          <ScalarProperty Name="OwnerID" ColumnName="OwnerID" />
+        </ComplexTypeMapping>
+      </ResultMapping>
+    </FunctionImportMapping>
+    <FunctionImportMapping FunctionImportName="sp_renamediagram" FunctionName="CS564Model.Store.sp_renamediagram" />
+    <FunctionImportMapping FunctionImportName="sp_upgraddiagrams" FunctionName="CS564Model.Store.sp_upgraddiagrams" />
+    <EntitySetMapping Name="VMetricFactsAndStats">
+      <EntityTypeMapping TypeName="CS564Model.VMetricFactsAndStat">
+        <MappingFragment StoreEntitySet="VMetricFactsAndStats">
+          <ScalarProperty Name="CollectionMethodByYear" ColumnName="CollectionMethodByYear" />
+          <ScalarProperty Name="ranking" ColumnName="ranking" />
+          <ScalarProperty Name="Size" ColumnName="Size" />
+          <ScalarProperty Name="Max" ColumnName="Max" />
+          <ScalarProperty Name="Min" ColumnName="Min" />
+          <ScalarProperty Name="Average" ColumnName="Average" />
+          <ScalarProperty Name="p95" ColumnName="p95" />
+          <ScalarProperty Name="p90" ColumnName="p90" />
+          <ScalarProperty Name="p75" ColumnName="p75" />
+          <ScalarProperty Name="p50" ColumnName="p50" />
+          <ScalarProperty Name="p25" ColumnName="p25" />
+          <ScalarProperty Name="p10" ColumnName="p10" />
+          <ScalarProperty Name="p5" ColumnName="p5" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="Year" ColumnName="Year" />
+          <ScalarProperty Name="LimitationsAndExceptions" ColumnName="LimitationsAndExceptions" />
+          <ScalarProperty Name="AggregationMethod" ColumnName="AggregationMethod" />
+          <ScalarProperty Name="OtherNotes" ColumnName="OtherNotes" />
+          <ScalarProperty Name="UnitOfMeasure" ColumnName="UnitOfMeasure" />
+          <ScalarProperty Name="IndicatorName" ColumnName="IndicatorName" />
+          <ScalarProperty Name="Topic" ColumnName="Topic" />
+          <ScalarProperty Name="IndicatorCode" ColumnName="IndicatorCode" />
+          <ScalarProperty Name="CountryCode" ColumnName="CountryCode" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <FunctionImportMapping FunctionImportName="createPeerGroupEntities" FunctionName="CS564Model.Store.createPeerGroupEntities" />
+  </EntityContainerMapping>
+</Mapping>

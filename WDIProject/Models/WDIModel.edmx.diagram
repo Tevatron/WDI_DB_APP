@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="72ac2f948ce74e969a3cc444ab9d16d2" Name="Diagram1">
+        <EntityTypeShape EntityType="CS564Model.CollectedThrough" Width="1.5" PointX="3" PointY="13.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS564Model.CorrelatesTo" Width="1.5" PointX="3" PointY="10.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS564Model.Country" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS564Model.Footnote" Width="1.5" PointX="6" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS564Model.Indicator" Width="1.5" PointX="6" PointY="7.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS564Model.IsSimilar" Width="1.5" PointX="6" PointY="3.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS564Model.MetricAggregation" Width="1.5" PointX="3" PointY="18.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS564Model.MetricDefinition" Width="1.5" PointX="3" PointY="23.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS564Model.Metric" Width="1.5" PointX="0.75" PointY="8.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="CS564Model.sysdiagram" Width="1.5" PointX="0.75" PointY="1.75" IsExpanded="true" />
+        <AssociationConnector Association="CS564Model.FK__CountryNo__Count__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="CS564Model.FK__CountryNo__Count__6E01572D" ManuallyRouted="false" />
+        <AssociationConnector Association="CS564Model.FK__CountryNo__Serie__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="CS564Model.FK__Correlati__Serie__0A9D95DB" ManuallyRouted="false" />
+        <AssociationConnector Association="CS564Model.FK__Correlati__Serie__0B91BA14" ManuallyRouted="false" />
+        <AssociationConnector Association="CS564Model.FK__Footnotes__Count__6A30C649" ManuallyRouted="false" />
+        <AssociationConnector Association="CS564Model.FK__Indicator__Count__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="CS564Model.FK__Similarit__Count__05D8E0BE" ManuallyRouted="false" />
+        <AssociationConnector Association="CS564Model.FK__Similarit__Count__06CD04F7" ManuallyRouted="false" />
+        <AssociationConnector Association="CS564Model.FK__Footnotes__Serie__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="CS564Model.FK__Indicator__Indic__6D0D32F4" ManuallyRouted="false" />
+        <AssociationConnector Association="CS564Model.FK__Indicator__Serie__02FC7413" ManuallyRouted="false" />
+        <AssociationConnector Association="CS564Model.FK__SeriesNot__Serie__6754599E" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="CS564Model.VMetricFactsAndStat" Width="3.875" PointX="7.875" PointY="0.875" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

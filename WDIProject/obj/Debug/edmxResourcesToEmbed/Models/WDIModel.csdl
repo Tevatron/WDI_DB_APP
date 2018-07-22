@@ -1,0 +1,480 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="CS564Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="CollectedThrough">
+    <Key>
+      <PropertyRef Name="Countrycode" />
+      <PropertyRef Name="Seriescode" />
+    </Key>
+    <Property Name="Countrycode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Seriescode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CollectionDescription" Type="String" MaxLength="700" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Country" Relationship="Self.FK__CountryNo__Count__628FA481" FromRole="CollectedThrough" ToRole="Country" />
+    <NavigationProperty Name="Country1" Relationship="Self.FK__CountryNo__Count__6E01572D" FromRole="CollectedThrough" ToRole="Country" />
+    <NavigationProperty Name="Metric" Relationship="Self.FK__CountryNo__Serie__656C112C" FromRole="CollectedThrough" ToRole="Metrics" />
+  </EntityType>
+  <EntityType Name="CorrelatesTo">
+    <Key>
+      <PropertyRef Name="SeriesPrimary" />
+      <PropertyRef Name="SeriesSecondary" />
+    </Key>
+    <Property Name="SeriesPrimary" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SeriesSecondary" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CorrelationScore" Type="Double" />
+    <NavigationProperty Name="Metric" Relationship="Self.FK__Correlati__Serie__0A9D95DB" FromRole="CorrelatesTo" ToRole="Metrics" />
+    <NavigationProperty Name="Metric1" Relationship="Self.FK__Correlati__Serie__0B91BA14" FromRole="CorrelatesTo" ToRole="Metrics" />
+  </EntityType>
+  <EntityType Name="Country">
+    <Key>
+      <PropertyRef Name="CountryCode" />
+    </Key>
+    <Property Name="CountryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ShortName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="TableName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="LongName" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Alpha2Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="CurrencyUnit" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SpecialNotes" Type="String" MaxLength="1100" FixedLength="false" Unicode="true" />
+    <Property Name="Region" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IncomeGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Wb2Code" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="NationalAccountsBaseYear" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="NationalAccountsReferenceYear" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SnaPriceValuation" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LendingCategory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OtherGroups" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SystemOfNationalAccounts" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="AlternativeConversionFactor" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="PppSurveyYear" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="BalanceOfPaymentsManualInUse" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ExternalDebtReportingStatus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="SystemOfTrade" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="GovernmentAccountingConcept" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ImfDataDisseminationStandard" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LatestPopulationCensus" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LatestHouseholdSurvey" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="SourceOfMostRecentIncomeAndExpenditureData" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="VitalRegistrationComplete" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LatestAgriculturalCensus" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LatestIndustrialData" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LatestTradeData" Type="Double" />
+    <Property Name="LatestWaterWithdrawalData" Type="Double" />
+    <NavigationProperty Name="CollectedThroughs" Relationship="Self.FK__CountryNo__Count__628FA481" FromRole="Country" ToRole="CollectedThrough" />
+    <NavigationProperty Name="CollectedThroughs1" Relationship="Self.FK__CountryNo__Count__6E01572D" FromRole="Country" ToRole="CollectedThrough" />
+    <NavigationProperty Name="Footnotes" Relationship="Self.FK__Footnotes__Count__6A30C649" FromRole="Country" ToRole="Footnotes" />
+    <NavigationProperty Name="Indicators" Relationship="Self.FK__Indicator__Count__6C190EBB" FromRole="Country" ToRole="Indicators" />
+    <NavigationProperty Name="IsSimilars" Relationship="Self.FK__Similarit__Count__05D8E0BE" FromRole="Country" ToRole="IsSimilar" />
+    <NavigationProperty Name="IsSimilars1" Relationship="Self.FK__Similarit__Count__06CD04F7" FromRole="Country" ToRole="IsSimilar" />
+  </EntityType>
+  <EntityType Name="Footnote">
+    <Key>
+      <PropertyRef Name="Countrycode" />
+      <PropertyRef Name="Seriescode" />
+      <PropertyRef Name="Year" />
+    </Key>
+    <Property Name="Countrycode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Seriescode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" Nullable="false" />
+    <NavigationProperty Name="Country" Relationship="Self.FK__Footnotes__Count__6A30C649" FromRole="Footnotes" ToRole="Country" />
+    <NavigationProperty Name="Metric" Relationship="Self.FK__Footnotes__Serie__693CA210" FromRole="Footnotes" ToRole="Metrics" />
+  </EntityType>
+  <EntityType Name="Indicator">
+    <Key>
+      <PropertyRef Name="CountryCode" />
+      <PropertyRef Name="IndicatorCode" />
+      <PropertyRef Name="Year" />
+    </Key>
+    <Property Name="CountryCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IndicatorCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Value" Type="Double" Nullable="false" />
+    <Property Name="CollectionMethodByYear" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+    <NavigationProperty Name="Country" Relationship="Self.FK__Indicator__Count__6C190EBB" FromRole="Indicators" ToRole="Country" />
+    <NavigationProperty Name="Metric" Relationship="Self.FK__Indicator__Indic__6D0D32F4" FromRole="Indicators" ToRole="Metrics" />
+  </EntityType>
+  <EntityType Name="IsSimilar">
+    <Key>
+      <PropertyRef Name="CountryPrimary" />
+      <PropertyRef Name="CountrySecondary" />
+    </Key>
+    <Property Name="CountryPrimary" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="CountrySecondary" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SimilarityScore" Type="Double" />
+    <NavigationProperty Name="Country" Relationship="Self.FK__Similarit__Count__05D8E0BE" FromRole="IsSimilar" ToRole="Country" />
+    <NavigationProperty Name="Country1" Relationship="Self.FK__Similarit__Count__06CD04F7" FromRole="IsSimilar" ToRole="Country" />
+  </EntityType>
+  <EntityType Name="MetricAggregation">
+    <Key>
+      <PropertyRef Name="PeerGroup" />
+      <PropertyRef Name="SeriesCode" />
+      <PropertyRef Name="Year" />
+    </Key>
+    <Property Name="PeerGroup" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="SeriesCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Size" Type="Int32" />
+    <Property Name="Average" Type="Double" />
+    <Property Name="Max" Type="Double" />
+    <Property Name="Min" Type="Double" />
+    <Property Name="P5" Type="Double" />
+    <Property Name="P10" Type="Double" />
+    <Property Name="P25" Type="Double" />
+    <Property Name="P50" Type="Double" />
+    <Property Name="P75" Type="Double" />
+    <Property Name="P90" Type="Double" />
+    <Property Name="P95" Type="Double" />
+    <NavigationProperty Name="Metric" Relationship="Self.FK__Indicator__Serie__02FC7413" FromRole="MetricAggregation" ToRole="Metrics" />
+  </EntityType>
+  <EntityType Name="MetricDefinition">
+    <Key>
+      <PropertyRef Name="Seriescode" />
+      <PropertyRef Name="Year" />
+    </Key>
+    <Property Name="Seriescode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Year" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Description" Type="String" MaxLength="500" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="Metric" Relationship="Self.FK__SeriesNot__Serie__6754599E" FromRole="MetricDefinition" ToRole="Metrics" />
+  </EntityType>
+  <EntityType Name="Metric">
+    <Key>
+      <PropertyRef Name="SeriesCode" />
+    </Key>
+    <Property Name="SeriesCode" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="Topic" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="IndicatorName" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="ShortDefinition" Type="String" MaxLength="1000" FixedLength="false" Unicode="true" />
+    <Property Name="LongDefinition" Type="String" MaxLength="2450" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="UnitOfMeasure" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Periodicity" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="BasePeriod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OtherNotes" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="AggregationMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LimitationsAndExceptions" Type="String" MaxLength="3700" FixedLength="false" Unicode="true" />
+    <Property Name="NotesFromOriginalSource" Type="String" MaxLength="1200" FixedLength="false" Unicode="true" />
+    <Property Name="GeneralComments" Type="String" MaxLength="1300" FixedLength="false" Unicode="true" />
+    <Property Name="Source" Type="String" MaxLength="550" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="StatisticalConceptAndMethodology" Type="String" MaxLength="4000" FixedLength="false" Unicode="true" />
+    <Property Name="DevelopmentRelevance" Type="String" MaxLength="3800" FixedLength="false" Unicode="true" />
+    <Property Name="RelatedSourceLinks" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="OtherWebLinks" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="RelatedIndicators" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="LicenseType" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+    <NavigationProperty Name="CollectedThroughs" Relationship="Self.FK__CountryNo__Serie__656C112C" FromRole="Metrics" ToRole="CollectedThrough" />
+    <NavigationProperty Name="CorrelatesToes" Relationship="Self.FK__Correlati__Serie__0A9D95DB" FromRole="Metrics" ToRole="CorrelatesTo" />
+    <NavigationProperty Name="CorrelatesToes1" Relationship="Self.FK__Correlati__Serie__0B91BA14" FromRole="Metrics" ToRole="CorrelatesTo" />
+    <NavigationProperty Name="Footnotes" Relationship="Self.FK__Footnotes__Serie__693CA210" FromRole="Metrics" ToRole="Footnotes" />
+    <NavigationProperty Name="Indicators" Relationship="Self.FK__Indicator__Indic__6D0D32F4" FromRole="Metrics" ToRole="Indicators" />
+    <NavigationProperty Name="MetricAggregations" Relationship="Self.FK__Indicator__Serie__02FC7413" FromRole="Metrics" ToRole="MetricAggregation" />
+    <NavigationProperty Name="MetricDefinitions" Relationship="Self.FK__SeriesNot__Serie__6754599E" FromRole="Metrics" ToRole="MetricDefinition" />
+  </EntityType>
+  <EntityType Name="sysdiagram">
+    <Key>
+      <PropertyRef Name="diagram_id" />
+    </Key>
+    <Property Name="name" Type="String" MaxLength="128" FixedLength="false" Unicode="true" Nullable="false" />
+    <Property Name="principal_id" Type="Int32" Nullable="false" />
+    <Property Name="diagram_id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="version" Type="Int32" />
+    <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
+  </EntityType>
+  <Association Name="FK__CountryNo__Count__628FA481">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="CollectedThrough" Type="Self.CollectedThrough" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryCode" />
+      </Principal>
+      <Dependent Role="CollectedThrough">
+        <PropertyRef Name="Countrycode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CountryNo__Count__6E01572D">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="CollectedThrough" Type="Self.CollectedThrough" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryCode" />
+      </Principal>
+      <Dependent Role="CollectedThrough">
+        <PropertyRef Name="Countrycode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__CountryNo__Serie__656C112C">
+    <End Role="Metrics" Type="Self.Metric" Multiplicity="1" />
+    <End Role="CollectedThrough" Type="Self.CollectedThrough" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metrics">
+        <PropertyRef Name="SeriesCode" />
+      </Principal>
+      <Dependent Role="CollectedThrough">
+        <PropertyRef Name="Seriescode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Correlati__Serie__0A9D95DB">
+    <End Role="Metrics" Type="Self.Metric" Multiplicity="1" />
+    <End Role="CorrelatesTo" Type="Self.CorrelatesTo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metrics">
+        <PropertyRef Name="SeriesCode" />
+      </Principal>
+      <Dependent Role="CorrelatesTo">
+        <PropertyRef Name="SeriesPrimary" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Correlati__Serie__0B91BA14">
+    <End Role="Metrics" Type="Self.Metric" Multiplicity="1" />
+    <End Role="CorrelatesTo" Type="Self.CorrelatesTo" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metrics">
+        <PropertyRef Name="SeriesCode" />
+      </Principal>
+      <Dependent Role="CorrelatesTo">
+        <PropertyRef Name="SeriesSecondary" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Footnotes__Count__6A30C649">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="Footnotes" Type="Self.Footnote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryCode" />
+      </Principal>
+      <Dependent Role="Footnotes">
+        <PropertyRef Name="Countrycode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Indicator__Count__6C190EBB">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="Indicators" Type="Self.Indicator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryCode" />
+      </Principal>
+      <Dependent Role="Indicators">
+        <PropertyRef Name="CountryCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Similarit__Count__05D8E0BE">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="IsSimilar" Type="Self.IsSimilar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryCode" />
+      </Principal>
+      <Dependent Role="IsSimilar">
+        <PropertyRef Name="CountryPrimary" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Similarit__Count__06CD04F7">
+    <End Role="Country" Type="Self.Country" Multiplicity="1" />
+    <End Role="IsSimilar" Type="Self.IsSimilar" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Country">
+        <PropertyRef Name="CountryCode" />
+      </Principal>
+      <Dependent Role="IsSimilar">
+        <PropertyRef Name="CountrySecondary" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Footnotes__Serie__693CA210">
+    <End Role="Metrics" Type="Self.Metric" Multiplicity="1" />
+    <End Role="Footnotes" Type="Self.Footnote" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metrics">
+        <PropertyRef Name="SeriesCode" />
+      </Principal>
+      <Dependent Role="Footnotes">
+        <PropertyRef Name="Seriescode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Indicator__Indic__6D0D32F4">
+    <End Role="Metrics" Type="Self.Metric" Multiplicity="1" />
+    <End Role="Indicators" Type="Self.Indicator" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metrics">
+        <PropertyRef Name="SeriesCode" />
+      </Principal>
+      <Dependent Role="Indicators">
+        <PropertyRef Name="IndicatorCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__Indicator__Serie__02FC7413">
+    <End Role="Metrics" Type="Self.Metric" Multiplicity="1" />
+    <End Role="MetricAggregation" Type="Self.MetricAggregation" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metrics">
+        <PropertyRef Name="SeriesCode" />
+      </Principal>
+      <Dependent Role="MetricAggregation">
+        <PropertyRef Name="SeriesCode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK__SeriesNot__Serie__6754599E">
+    <End Role="Metrics" Type="Self.Metric" Multiplicity="1" />
+    <End Role="MetricDefinition" Type="Self.MetricDefinition" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Metrics">
+        <PropertyRef Name="SeriesCode" />
+      </Principal>
+      <Dependent Role="MetricDefinition">
+        <PropertyRef Name="Seriescode" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="CS564Entities" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="CollectedThroughs" EntityType="Self.CollectedThrough" />
+    <EntitySet Name="CorrelatesToes" EntityType="Self.CorrelatesTo" />
+    <EntitySet Name="Countries" EntityType="Self.Country" />
+    <EntitySet Name="Footnotes" EntityType="Self.Footnote" />
+    <EntitySet Name="Indicators" EntityType="Self.Indicator" />
+    <EntitySet Name="IsSimilars" EntityType="Self.IsSimilar" />
+    <EntitySet Name="MetricAggregations" EntityType="Self.MetricAggregation" />
+    <EntitySet Name="MetricDefinitions" EntityType="Self.MetricDefinition" />
+    <EntitySet Name="Metrics" EntityType="Self.Metric" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
+    <AssociationSet Name="FK__CountryNo__Count__628FA481" Association="Self.FK__CountryNo__Count__628FA481">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="CollectedThrough" EntitySet="CollectedThroughs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CountryNo__Count__6E01572D" Association="Self.FK__CountryNo__Count__6E01572D">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="CollectedThrough" EntitySet="CollectedThroughs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__CountryNo__Serie__656C112C" Association="Self.FK__CountryNo__Serie__656C112C">
+      <End Role="Metrics" EntitySet="Metrics" />
+      <End Role="CollectedThrough" EntitySet="CollectedThroughs" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Correlati__Serie__0A9D95DB" Association="Self.FK__Correlati__Serie__0A9D95DB">
+      <End Role="Metrics" EntitySet="Metrics" />
+      <End Role="CorrelatesTo" EntitySet="CorrelatesToes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Correlati__Serie__0B91BA14" Association="Self.FK__Correlati__Serie__0B91BA14">
+      <End Role="Metrics" EntitySet="Metrics" />
+      <End Role="CorrelatesTo" EntitySet="CorrelatesToes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Footnotes__Count__6A30C649" Association="Self.FK__Footnotes__Count__6A30C649">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Footnotes" EntitySet="Footnotes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Indicator__Count__6C190EBB" Association="Self.FK__Indicator__Count__6C190EBB">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="Indicators" EntitySet="Indicators" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Similarit__Count__05D8E0BE" Association="Self.FK__Similarit__Count__05D8E0BE">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="IsSimilar" EntitySet="IsSimilars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Similarit__Count__06CD04F7" Association="Self.FK__Similarit__Count__06CD04F7">
+      <End Role="Country" EntitySet="Countries" />
+      <End Role="IsSimilar" EntitySet="IsSimilars" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Footnotes__Serie__693CA210" Association="Self.FK__Footnotes__Serie__693CA210">
+      <End Role="Metrics" EntitySet="Metrics" />
+      <End Role="Footnotes" EntitySet="Footnotes" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Indicator__Indic__6D0D32F4" Association="Self.FK__Indicator__Indic__6D0D32F4">
+      <End Role="Metrics" EntitySet="Metrics" />
+      <End Role="Indicators" EntitySet="Indicators" />
+    </AssociationSet>
+    <AssociationSet Name="FK__Indicator__Serie__02FC7413" Association="Self.FK__Indicator__Serie__02FC7413">
+      <End Role="Metrics" EntitySet="Metrics" />
+      <End Role="MetricAggregation" EntitySet="MetricAggregations" />
+    </AssociationSet>
+    <AssociationSet Name="FK__SeriesNot__Serie__6754599E" Association="Self.FK__SeriesNot__Serie__6754599E">
+      <End Role="Metrics" EntitySet="Metrics" />
+      <End Role="MetricDefinition" EntitySet="MetricDefinitions" />
+    </AssociationSet>
+    <FunctionImport Name="popIndicatorStats" />
+    <FunctionImport Name="sp_alterdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_creatediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="version" Mode="In" Type="Int32" />
+      <Parameter Name="definition" Mode="In" Type="Binary" />
+    </FunctionImport>
+    <FunctionImport Name="sp_dropdiagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagramdefinition" ReturnType="Collection(CS564Model.sp_helpdiagramdefinition_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_helpdiagrams" ReturnType="Collection(CS564Model.sp_helpdiagrams_Result)">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+    </FunctionImport>
+    <FunctionImport Name="sp_renamediagram">
+      <Parameter Name="diagramname" Mode="In" Type="String" />
+      <Parameter Name="owner_id" Mode="In" Type="Int32" />
+      <Parameter Name="new_diagramname" Mode="In" Type="String" />
+    </FunctionImport>
+    <FunctionImport Name="sp_upgraddiagrams" />
+    <EntitySet Name="VMetricFactsAndStats" EntityType="CS564Model.VMetricFactsAndStat" />
+    <FunctionImport Name="createPeerGroupEntities">
+      <Parameter Name="targetString" Mode="In" Type="String" />
+    </FunctionImport>
+  </EntityContainer>
+  <ComplexType Name="sp_helpdiagramdefinition_Result">
+    <Property Type="Int32" Name="version" Nullable="true" />
+    <Property Type="Binary" Name="definition" Nullable="true" />
+  </ComplexType>
+  <ComplexType Name="sp_helpdiagrams_Result">
+    <Property Type="String" Name="Database" Nullable="true" MaxLength="128" />
+    <Property Type="String" Name="Name" Nullable="false" MaxLength="128" />
+    <Property Type="Int32" Name="ID" Nullable="false" />
+    <Property Type="String" Name="Owner" Nullable="true" MaxLength="128" />
+    <Property Type="Int32" Name="OwnerID" Nullable="false" />
+  </ComplexType>
+  <EntityType Name="VMetricFactsAndStat">
+    <Key>
+      <PropertyRef Name="CountryCode" />
+      <PropertyRef Name="IndicatorCode" />
+      <PropertyRef Name="Topic" />
+      <PropertyRef Name="IndicatorName" />
+      <PropertyRef Name="Year" />
+      <PropertyRef Name="Value" />
+      <PropertyRef Name="ranking" />
+    </Key>
+    <Property Name="CountryCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IndicatorCode" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Topic" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
+    <Property Name="IndicatorName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="UnitOfMeasure" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="OtherNotes" Type="String" MaxLength="1" FixedLength="false" Unicode="true" />
+    <Property Name="AggregationMethod" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="LimitationsAndExceptions" Type="String" MaxLength="3700" FixedLength="false" Unicode="true" />
+    <Property Name="Year" Type="Int32" Nullable="false" />
+    <Property Name="Value" Type="Double" Nullable="false" />
+    <Property Name="p5" Type="Double" />
+    <Property Name="p10" Type="Double" />
+    <Property Name="p25" Type="Double" />
+    <Property Name="p50" Type="Double" />
+    <Property Name="p75" Type="Double" />
+    <Property Name="p90" Type="Double" />
+    <Property Name="p95" Type="Double" />
+    <Property Name="Average" Type="Double" />
+    <Property Name="Min" Type="Double" />
+    <Property Name="Max" Type="Double" />
+    <Property Name="Size" Type="Int32" />
+    <Property Name="ranking" Type="Int32" Nullable="false" />
+    <Property Name="CollectionMethodByYear" Type="String" MaxLength="Max" FixedLength="false" Unicode="false" />
+  </EntityType>
+</Schema>
